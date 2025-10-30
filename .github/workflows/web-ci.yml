@@ -11,9 +11,10 @@ jobs:
       # Clone do projeto para a máquina
       - uses: actions/checkout@v4
 
-      # Conferir a versão instalada
-      - name: Node version
-        run: node --version
+      # Configurar Node.js versão 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
 
       - name: Instalando dependências
         run: npm install
